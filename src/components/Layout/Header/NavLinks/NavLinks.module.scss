@@ -1,0 +1,31 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  display: none;
+}
+
+@include from1024 {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .buttons {
+      height: 100%;
+      min-width: max-content;
+
+      display: flex;
+      flex-direction: row-reverse;
+
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@include from1280 {
+  .container .buttons span {
+    font-size: 1.6rem;
+  }
+}

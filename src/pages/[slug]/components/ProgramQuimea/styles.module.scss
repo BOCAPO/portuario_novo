@@ -1,0 +1,83 @@
+.programQuimea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 132px;
+  border-width: 1px 0px 0px;
+  border-style: solid;
+  border-color: #438704;
+
+  &:last-child {
+    border-width: 1px 0px 1px;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #3C3E3A;
+    margin: 0;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #438704;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1279px){
+    height: auto;
+    padding: 32px 0;
+  }
+
+  @media (max-width: 616px) {
+    width: 100%;
+  }
+}
+
+.row{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1279px){
+    position: initial;
+    flex-direction: column;
+  }
+}
+
+.imageContainer {
+  width: 100px;
+  position: absolute;
+  left: -124px;
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 1279px){
+    position: initial;
+    left: 0;
+    margin-bottom: 24px;
+
+    width: 80px;
+  }
+
+  @media (max-width: 616px){
+    width: 100px;
+  }
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

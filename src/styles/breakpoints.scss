@@ -1,0 +1,113 @@
+/**
+ * MATERIAL MEDIA QUERIES
+ * As these breakpoints were made thinking in mobile first, 
+ * the word 'from' always refers 'from' smaller to wider
+ */
+
+$smartphoneExtraSmall: 320px;
+$smartphoneSmall: 360px;
+$smartphoneMedium: 400px;
+$smartphoneLarge: 480px;
+$tabletSmall: 600px;
+$tabletMedium: 720px;
+$tabletLarge: 840px;
+$pcExtraSmall: 960px;
+$pcSmall: 1024px;
+$pcMedium: 1280px;
+$pcLarge: 1440px;
+$pcExtraLarge: 1600px;
+$pcXExtraLarge: 1920px;
+
+@mixin from320() {
+  @media screen and (min-width: $smartphoneExtraSmall) {
+    @content;
+  }
+}
+
+@mixin from360() {
+  @media screen and (min-width: $smartphoneSmall) {
+    @content;
+  }
+}
+
+@mixin from400() {
+  @media screen and (min-width: $smartphoneMedium) {
+    @content;
+  }
+}
+
+@mixin from480() {
+  @media screen and (min-width: $smartphoneLarge) {
+    @content;
+  }
+}
+
+@mixin from600() {
+  @media screen and (min-width: $tabletSmall) {
+    @content;
+  }
+}
+
+@mixin from720() {
+  @media screen and (min-width: $tabletMedium) {
+    @content;
+  }
+}
+
+@mixin from840() {
+  @media screen and (min-width: $tabletLarge) {
+    @content;
+  }
+}
+
+@mixin from960() {
+  @media screen and (min-width: $pcExtraSmall) {
+    @content;
+  }
+}
+
+@mixin from1024() {
+  @media screen and (min-width: $pcSmall) {
+    @content;
+  }
+}
+
+@mixin from1280() {
+  @media screen and (min-width: $pcMedium) {
+    @content;
+  }
+}
+
+@mixin from1440() {
+  @media screen and (min-width: $pcLarge) {
+    @content;
+  }
+}
+
+@mixin from1600() {
+  @media screen and (min-width: $pcExtraLarge) {
+    @content;
+  }
+}
+
+@mixin from1920() {
+  @media screen and (min-width: $pcXExtraLarge) {
+    @content;
+  }
+}
+
+:export {
+  from320: $smartphoneExtraSmall;
+  from360: $smartphoneSmall;
+  from400: $smartphoneMedium;
+  from480: $smartphoneLarge;
+  from600: $tabletSmall;
+  from720: $tabletMedium;
+  from840: $tabletLarge;
+  from960: $pcExtraSmall;
+  from1024: $pcSmall;
+  from1280: $pcMedium;
+  from1440: $pcLarge;
+  from1600: $pcExtraLarge;
+  from1920: $pcXExtraLarge;
+}

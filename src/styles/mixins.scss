@@ -1,0 +1,46 @@
+@mixin dashed-divisor($direction: x, $dashSize: 11px, $color: #000) {
+  $repeat: repeat-x;
+  $way: to left;
+  @if $direction == y {
+    $repeat: repeat-y;
+    $way: to bottom;
+  }
+  background-image: linear-gradient($way, $color 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: $dashSize 1px;
+  background-repeat: $repeat;
+}
+
+@mixin seo-hide() {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/**
+  TODO: Replace this mixin properties with the new but complicated way to do multiline ellipsis
+  https://hackingui.com/a-pure-css-solution-for-multiline-text-truncation/
+*/
+@mixin ellipsis($lineCount) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineCount;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin hide-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

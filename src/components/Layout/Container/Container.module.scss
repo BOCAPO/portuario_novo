@@ -1,0 +1,42 @@
+@use 'styles/colors.module.scss' as *;
+
+.section {
+  width: 100%;
+
+  font-size: 2rem;
+
+  &.backgroundGray900 {
+    background-color: $gray900;
+  }
+
+  &.backgroundGray800 {
+    background-color: $gray800;
+  }
+
+  &.backgroundGrayGradient {
+    background: $backgroundGraygradient;
+  }
+
+  &.backgroundIce {
+    background-color: $whiteIce;
+  }
+
+  &.backgroundWhite {
+    background-color: $white;
+  }
+
+  &.backgroundBlack {
+    background-color: $black;
+  }
+
+  &.noPadding {
+    padding: 0;
+  }
+
+  .content {
+    width: 87%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+  }
+}

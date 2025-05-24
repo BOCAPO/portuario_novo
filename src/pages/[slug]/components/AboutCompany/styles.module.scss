@@ -1,0 +1,52 @@
+.aboutCompany {
+  display: flex;
+  gap: 32px;
+
+  @media (max-width: 1279px) {
+    flex-direction: column;
+  }
+}
+
+.aboutContainer{
+  max-width: 550px;
+  width: 100%;
+}
+
+.aboutTitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0;
+  color: #000000;
+}
+
+.mb16 {
+  margin-bottom: 16px !important;
+}
+
+.aboutText {
+  white-space: pre-line;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0;
+  color: #000000;
+  text-align: justify;
+}
+
+.aboutRow {
+  display: flex;
+  align-items: center;
+}
+
+.aboutColumnTitle {
+  min-width: 78px;
+  margin-right: 45px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  background: #D2D2D2;
+}

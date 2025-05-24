@@ -1,0 +1,31 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  .main {
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    button {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .authMessage {
+    margin-top: 10rem;
+    color: #50a773;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}

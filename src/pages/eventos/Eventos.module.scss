@@ -1,0 +1,41 @@
+.container {
+  padding: 5.6rem 0 10rem;
+
+  .eventsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cardsEventsContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .newEventsContainer {
+      padding: 7rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .newEventsButton {
+        background: #28a745;
+        color: #fff;
+        font-size: 1.4rem;
+        text-transform: none;
+        max-width: 90%;
+
+        &:hover {
+          background: #219454;
+        }
+      }
+
+      .newEventsText {
+        font-size: 2.1rem;
+        text-align: center;
+        max-width: 90%;
+      }
+    }
+  }
+}

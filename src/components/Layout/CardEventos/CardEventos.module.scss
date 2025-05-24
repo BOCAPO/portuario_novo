@@ -1,0 +1,102 @@
+@use "styles/breakpoints" as *;
+
+.cardEventosContainer {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba($color: #000000, $alpha: .15);
+  overflow: hidden;
+  max-width: 90%;
+  width: 100%;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & + .cardEventosContainer {
+    margin: 4rem 0 0;
+  }
+
+  .imageContainer {
+    border: 1px solid rgba($color: #000000, $alpha: .15);
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 246px;
+    height: 246px;
+    margin: 0 0 2rem;
+
+    .image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .eventInfo {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .eventTitle {
+      text-align: left;
+      font-size: 2.4rem;
+    }
+
+    .eventDescription,
+    .eventType,
+    .eventDate {
+      font-size: 1.6rem;
+    }
+
+    .eventDescription {
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .button {
+      margin: 2rem 0 0;
+      font-size: 1.6rem;
+      width: 100%;
+      max-width: 300px;
+      align-self: center;
+    }
+  }
+}
+
+@include from360() {
+  .cardEventosContainer {
+    .imageContainer {
+      max-width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+@include from720() {
+  .cardEventosContainer {
+    padding: 4rem;
+  }
+}
+
+@include from1024() {
+  .cardEventosContainer {
+    max-width: 95rem;
+    flex-direction: row;
+    gap: 4rem;
+
+    .imageContainer {
+      flex: 0 0 300px;
+      margin: 0;
+    }
+
+    .eventInfo {
+      flex-direction: column;
+    }
+  }
+}

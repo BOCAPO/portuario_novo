@@ -1,0 +1,65 @@
+.container {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+  border-radius: 16px;
+  opacity: 0.95;
+  padding: 40px 24px;
+  z-index: 3000;
+
+  max-width: 360px;
+  width: 100%;
+
+  @media (max-width: 607px) {
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lottie {
+  margin: 0 auto 16px;
+  width: 80px;
+  height: 80px;
+}
+
+.text {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+
+  a {
+    color: #27ae60;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 607px) {
+    max-width: 240px;
+  }
+}
+
+
+.button {
+  background: #27ae60;
+  cursor: pointer;
+  width: 140px;
+  border-radius: 8px;
+  border: none;
+  height: 44px;
+  margin-top: 24px;
+
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+}

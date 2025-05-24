@@ -1,0 +1,70 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  .main {
+    padding-top: 5.6rem;
+
+    .content {
+      padding: 3.2rem 0 0;
+
+      .news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .pagination {
+          display: flex;
+          justify-content: center;
+          margin: 6.4rem 0;
+        }
+
+        .spinner {
+          display: block;
+          margin: 5rem auto;
+        }
+
+        .notFoundPostsMessage {
+          font-size: 1.8rem;
+          text-align: center;
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .main {
+      .content {
+        display: flex;
+        flex-direction: row;
+        max-width: 1280px;
+        margin: auto;
+        padding: 2rem;
+
+        .news {
+          width: 70%;
+          padding: 4rem 4rem;
+
+          .pagination {
+            margin-bottom: 0;
+          }
+
+          .title {
+            text-align: start;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            text-transform: uppercase;
+          }
+
+          .notFoundPostsMessage {
+            font-size: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}

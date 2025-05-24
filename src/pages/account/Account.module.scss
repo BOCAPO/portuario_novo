@@ -1,0 +1,177 @@
+.mainContainer {
+  min-height: 100vh;
+  padding: 5.6rem 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .accountInputsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    padding: 4rem 2rem;
+
+    .nameAndLastNameContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .telephoneAndCpfContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .postalCodeContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .numberAndComplementContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .formStackContainer {
+      flex-grow: 1;
+
+      .userImageContainer {
+        background-color: #f2f2f2;
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+
+        cursor: pointer;
+        margin: 2rem auto;
+        border: 2px solid rgba($color: #000000, $alpha: 0.9);
+        border-radius: 50%;
+        overflow: hidden;
+
+        &:hover {
+          .userMessage {
+            opacity: 1;
+          }
+        }
+
+        .userMessage {
+          cursor: pointer;
+          background-color: rgba($color: #000000, $alpha: 0.6);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+
+          position: absolute;
+          bottom: 0rem;
+
+          text-align: center;
+          font-size: 2.4rem;
+          color: #fff;
+
+          transition: all 0.3s;
+
+          .inputFile {
+            display: none;
+          }
+        }
+
+        .userImage {
+          width: 25rem;
+          height: 25rem;
+          object-fit: cover;
+        }
+      }
+
+      .buttonsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 14rem;
+
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .mainContainer {
+    .accountInputsContainer {
+      .formStackContainer {
+        .buttonsContainer {
+          flex-direction: row;
+          min-height: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .mainContainer {
+    .accountInputsContainer {
+      .nameAndLastNameContainer {
+        flex-direction: row;
+
+        .firstNameInput {
+          width: 40%;
+        }
+
+        .lastNameInput {
+          flex-grow: 1;
+        }
+      }
+
+      .telephoneAndCpfContainer {
+        flex-direction: row;
+
+        .telephoneInput {
+          width: 40%;
+        }
+
+        .cpfInput {
+          flex-grow: 1;
+        }
+      }
+
+      .postalCodeContainer {
+        flex-direction: row;
+
+        .postalCodeInput {
+          width: 25%;
+        }
+
+        .stateInput {
+          width: 15%;
+        }
+
+        .cityInput {
+          flex-grow: 1;
+        }
+
+      }
+
+      .numberAndComplementContainer {
+        flex-direction: row;
+
+        .numberInput {
+          width: 25%;
+        }
+
+        .complementInput {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}

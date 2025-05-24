@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  econext-nextjs:
+    image: growtechnologies/econext-frontend-stg:latest
+    container_name: nextjs-econext
+    restart: always
+    networks:
+      - proxy
+
+  econext-nginx:
+    container_name: nginx-nextjs-econext
+    build: ./nginx
+    restart: always
+    environment:
+      - VIRTUAL_HOST=quimea-uihml.growtechnologies.com.br
+      - VIRTUAL_NETWORK=nginx-proxy
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=quimea-uihml.growtechnologies.com.br
+      - LETSENCRYPT_EMAIL=admin@zorgen.tech
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external:
+      name: nginx-proxy

@@ -1,0 +1,47 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["**/package.json", "**/*.ts", "**/*.tsx"],
+  "rules": {
+    "scss/dollar-variable-pattern": "(^[a-z])[A-Za-z0-9]+$",
+    
+    "max-nesting-depth": 8,
+
+    "property-no-unknown": [ true,
+      { "ignoreSelectors": [":export"] }
+    ],
+
+    "selector-max-compound-selectors": 8,
+    "selector-class-pattern": [
+      "(^[a-z])[A-Za-z]+$", 
+      {
+        "message": "Classes should be wrote as camelCase"
+      }
+    ],
+
+    "value-no-vendor-prefix": [true, {
+      "ignoreValues": ["box"]
+    }],
+    "property-no-vendor-prefix": [true, {
+      "ignoreProperties": ["box-orient"]
+    }],
+
+    "selector-no-qualifying-type": [true , {"ignore": ["attribute","class", "id"]}],
+
+    "order/properties-alphabetical-order": null,
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": false
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+.blogCardContainer {
+  cursor: pointer;
+  min-height: 45rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & + .blogCardContainer {
+    margin-top: 3.2rem;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  .cardContentContainer {
+    width: 100%;
+    padding: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    .cardTitle,
+    .date {
+      margin: 0;
+    }
+
+    .cardTitle {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 4rem;
+    }
+
+    .date {
+      text-align: end;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+}

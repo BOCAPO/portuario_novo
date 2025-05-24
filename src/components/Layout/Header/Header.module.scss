@@ -1,0 +1,26 @@
+.appBar {
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+}
+
+.modalContent {
+  h3 {
+    font-size: 5.6rem;
+    line-height: 6.8rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: justify;
+    margin-top: 6.8rem;
+  }
+}

@@ -1,0 +1,66 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 90%;
+  min-width: 90%;
+  margin: 0 auto;
+
+  .notFoundMessage {
+    margin: 0 auto;
+    font-size: 2.4rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .searchContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    min-width: 100%;
+
+    .switch {
+      margin: 3rem 0 5rem;
+    }
+
+    .inputAndButtonContainer {
+      display: flex;
+      flex-grow: 1;
+
+      .inputSearch {
+        width: 100%;
+      }
+
+      .buttonSearch {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .pagination {
+    max-width: 415px;
+    margin: 24px 0;
+  }
+
+  .spinner {
+    margin: 0 auto 8rem;
+  }
+}
+
+@include from600 {
+  .container {
+    .searchContainer {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .inputAndButtonContainer {
+        max-width: 50rem;
+        margin-left: 2rem;
+      }
+    }
+  }
+}

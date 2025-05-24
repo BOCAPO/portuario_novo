@@ -1,0 +1,31 @@
+@use "styles/breakpoints" as *;
+
+.buttonsContainer {
+  display: none;
+  align-items: center;
+
+  .button {
+    display: none;
+    min-width: max-content;
+
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include from1024 {
+  .buttonsContainer {
+    display: flex;
+
+    .button {
+      display: flex;
+    }
+  }
+}

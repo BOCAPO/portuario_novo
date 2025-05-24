@@ -1,0 +1,30 @@
+@use "styles/breakpoints" as *;
+
+.mainContainer {
+  padding-top: 5.6rem;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .content {
+      padding: 2rem 4rem;
+      max-width: 1200px;
+
+      & p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include from600 {
+  .mainContainer {
+    .container {
+      .content {
+        padding: 4rem 10rem;
+      }
+    }
+  }
+}

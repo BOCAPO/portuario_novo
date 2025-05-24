@@ -1,0 +1,19 @@
+.accordionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  cursor: pointer;
+  border-bottom: 1px solid #e9e9e9;
+
+  i {
+    font-size: 10px;
+    max-height: 10px;
+    transition: 0.3s;
+    transform: rotate(180deg);
+  }
+}
+
+.iconRevert {
+  transform: rotate(0deg) !important;
+}

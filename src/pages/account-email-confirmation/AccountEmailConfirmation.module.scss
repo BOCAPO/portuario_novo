@@ -1,0 +1,43 @@
+@use "styles/breakpoints" as *;
+
+.messageContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 2.9rem;
+
+  min-width: 32rem;
+  padding: 2rem;
+  text-align: center;
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    background-color: #27ae60;
+  }
+}
+
+@include from720 {
+  .messageContainer {
+    h3 {
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    .button {
+      font-size: 1.6rem;
+    }
+  }
+}

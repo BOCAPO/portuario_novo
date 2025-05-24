@@ -1,0 +1,94 @@
+@use 'sass:math';
+@use 'styles/breakpoints' as *;
+
+$image-width: 300px;
+
+.container {
+  position: relative;
+
+  .background {
+    z-index: -1;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 1;
+    position: relative;
+    align-items: center;
+
+    padding: 10px 0 50px;
+
+    .dynamicText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      text-align: center;
+      height: 100px;
+
+      .title {
+        font-size: 1.7rem;
+        margin: 0 0 10px;
+      }
+
+      .text {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+
+    .imageWrapper {
+      display: grid;
+      grid-template-columns: 30% 22.5% 18.5% 1fr;
+
+      position: relative;
+
+      width: $image-width;
+      height: math.div($image-width, 4);
+      margin: auto;
+
+      .image {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+      }
+    }
+
+    .description {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+}
+
+@include from600 {
+  $image-width: 600px;
+
+  .container {
+    .content {
+      .dynamicText {
+        height: 120px;
+
+        .title {
+          font-size: 2.4rem;
+        }
+
+        .text {
+          font-size: 2rem;
+        }
+      }
+
+      .imageWrapper {
+        width: $image-width;
+        height: math.div($image-width, 4);
+      }
+
+      .description {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

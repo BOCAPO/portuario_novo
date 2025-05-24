@@ -1,0 +1,73 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-justify: center;
+  padding-top: 5.6rem;
+  padding-bottom: 6rem;
+
+  .title {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 4rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h3 {
+      margin-left: 1.6rem;
+      font-size: 2.5rem;
+    }
+
+    h3:last-child {
+      margin-top: 2rem;
+    }
+  }
+
+  .buttonSeeMore {
+    display: block;
+    width: max-content;
+    margin: 8rem auto 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: none;
+    padding: 0.5rem 7.5rem;
+    color: #1976d2;
+    border: 1px solid #1976d2;
+    border-radius: 0.8rem;
+  }
+
+  .coursesApresentationText {
+    font-size: 1.4rem;
+    text-align: justify;
+    padding: 2rem 2rem;
+  }
+
+  .coursesApresentationTitle {
+    font-size: 2.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+@include from1024 {
+  .container {
+    .coursesApresentationText {
+      font-size: 1.6rem;
+      text-align: center;
+      padding: 2rem 10rem;
+    }
+
+    .coursesApresentationTitle {
+      font-size: 2.6rem;
+      text-align: center;
+      padding: 2rem 10rem;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  flex-grow: 1;
+
+  .main {
+    width: 100%;
+    margin-top: 10rem;
+    overflow: hidden;
+
+    button {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .authMessage {
+    margin-top: 10rem;
+    color: #50a773;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media (max-width: 1280px) {
+    max-width: 616px;
+  }
+}
+
+.campaingContainer {
+  padding: 48px 0px;
+}

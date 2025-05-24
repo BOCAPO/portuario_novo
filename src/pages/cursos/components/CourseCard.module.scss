@@ -1,0 +1,87 @@
+.courseCardContainer {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1.6rem;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  a {
+    min-height: 50rem;
+    display: flex;
+    flex-direction: column;
+
+    .cardContentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      padding: 1.6rem 1.6rem 0.5rem 1.6rem ;
+
+      .cardTitle {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      
+      .cardBottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+      .cardAvailabilityDate {
+        font-weight: 500;
+        font-size: 1.15rem;
+        text-align: center;
+        color: #CCCCCC;
+      }
+
+      .cardTitle,
+      .oldPrice,
+      .cardPrice {
+        margin: 0;
+      }
+      .cardDate { 
+        font-size: 1.7rem;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 5px;
+      }
+
+      .oldPrice,
+      .cardPrice {
+        text-align: end;
+      }
+
+      .oldPrice {
+        text-decoration: line-through;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+      }
+
+      .notOldPrice {
+        opacity: 0;
+      }
+
+      .cardPrice {
+        font-size: 2.2rem;
+        line-height: 3rem;
+        font-weight: 600;
+        color: #50a773;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .courseCardContainer {
+    margin: 0;
+
+    & + .courseCardContainer {
+      margin-top: 3.2rem;
+    }
+  }
+}

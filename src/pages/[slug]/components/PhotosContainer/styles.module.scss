@@ -1,0 +1,36 @@
+.sectionMV128 {
+  margin: 128px 0;
+}
+
+
+.photoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @media (max-width: 1279px) {
+    gap: 18px;
+  }
+}
+
+.photoColumn {
+  width: 290px;
+  height: 193px;
+
+  @media (max-width: 1279px) {
+    width: 275px;
+    height: 183px;
+  }
+
+  @media (max-width: 616px) {
+    width: 100%;
+    height: calc(100vw - 130px);
+  }
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

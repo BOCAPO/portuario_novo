@@ -1,0 +1,23 @@
+
+.sustainableActions {
+  margin-top: 36px;
+}
+
+.sustainableText {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #3C3E3A;
+  margin-top: 35px;
+
+  a {
+    text-decoration-line: underline;
+    color: #438704;
+  }
+
+  @media (max-width: 1279px) {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}

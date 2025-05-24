@@ -1,0 +1,51 @@
+.blogCardContainer {
+  cursor: pointer;
+  margin: 1.6rem;
+  height: 50rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+
+  .cardMediaImg {
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .cardContentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 1.6rem;
+
+    .cardTitle,
+    .date {
+      margin: 0;
+    }
+
+    .cardTitle {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .date {
+      text-align: end;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blogCardContainer {
+    margin: 0;
+
+    & + .blogCardContainer {
+      margin-top: 3.2rem;
+    }
+  }
+}

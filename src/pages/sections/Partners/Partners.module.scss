@@ -1,0 +1,38 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  width: 70%;
+  padding: 0.5rem 0 5.3rem;
+
+  .main {
+    .title {
+      font-size: 3.6rem;
+      font-weight: 300;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .buttonSeeMore {
+      display: block;
+      width: max-content;
+      margin: 8rem auto 0;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-transform: none;
+      padding: 0.5rem 7.5rem;
+      color: #1976d2;
+      border: 1px solid #1976d2;
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+@include from1024() {
+  .container {
+    padding: auto 14rem 5.3rem;
+  }
+}

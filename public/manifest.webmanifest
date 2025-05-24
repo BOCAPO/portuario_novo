@@ -1,0 +1,28 @@
+{
+  "name": "Econext",
+  "short_name": "Econext",
+  "icons": [
+    {
+      "src": "./images/econextLogo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/econextLogo-384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/econextLogo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null,
+  "theme_color": "#28a745",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/"
+}

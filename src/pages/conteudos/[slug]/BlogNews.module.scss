@@ -1,0 +1,85 @@
+@use "styles/breakpoints" as *;
+
+.container {
+  .main {
+    padding-top: 5.6rem;
+
+    .returnButton {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+
+    .content {
+      .news {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0 4rem 6rem;
+
+        .title {
+          text-align: center;
+          font-size: 2.8rem;
+          line-height: 4rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          margin: 0 0 4rem;
+        }
+
+        .headerNews {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+
+          .categories {
+            display: flex;
+            align-items: center;
+            font-size: 1.6rem;
+          }
+
+          .contentDate {
+            font-size: 1.8rem;
+            font-weight: 500;
+          }
+        }
+
+        .contentData {
+          p {
+            text-align: left;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0.1rem;
+            background: #ccc;
+            margin: 4rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include from1024 {
+  .container {
+    .main {
+      .content {
+        max-width: 1280px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: row;
+
+        .news {
+          width: 70%;
+          padding-top: 4rem;
+        }
+      }
+    }
+  }
+}

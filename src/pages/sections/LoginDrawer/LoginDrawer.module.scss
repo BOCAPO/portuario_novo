@@ -1,0 +1,101 @@
+@use "styles/breakpoints" as *;
+
+.alertTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.container {
+  height: 100%;
+  padding: 4rem 2rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  .loginFormContainer,
+  .registerFormContainer,
+  .resetPasswordFormContainer {
+    button {
+      background-color: #27ae60;
+      font-size: 1.4rem;
+    }
+  }
+
+  .checkboxContainer {
+    margin: 32px 0;
+  }
+
+  .checkboxText {
+    font-size: 12px;
+    line-height: 13px;
+    color: #525252;
+
+    a {
+      color: #27ae60;
+      text-decoration: underline;
+    }
+  }
+
+  .checkboxError {
+    color: #d50000;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    color: #27ae60;
+  }
+
+  .errorMessage {
+    margin-top: 0.5rem;
+    color: #d32f2f;
+    font-size: 1.1rem;
+  }
+
+  .changeStepButton {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    padding-top: 4rem;
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    .userButtons {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+    }
+  }
+}
+
+@include from720 {
+  .container {
+    min-width: 45rem;
+    max-width: 45rem;
+
+    .errorMessage {
+      font-size: 1.4rem;
+    }
+  }
+}
